@@ -25,7 +25,7 @@ abstract class NoteDatabase :RoomDatabase(){
                 DATABASE_NAME
             ).build()
             INSTANCE = instance
-            instance
+                instance
 
             }
         }

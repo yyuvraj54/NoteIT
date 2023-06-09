@@ -90,6 +90,7 @@ class MainActivity : AppCompatActivity(),NotesAdapter.NotesClickListener,PopupMe
 
     override fun onItemClicked(note: Note) {
         val intent = Intent(this@MainActivity,AddNote::class.java)
+        intent.putExtra("current_note",note)
         updateNote.launch(intent)
     }
 

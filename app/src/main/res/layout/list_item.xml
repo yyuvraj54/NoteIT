@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/card_layout"
@@ -7,12 +8,13 @@
     android:layout_margin="8dp"
     android:padding="10dp"
     android:background="@color/white"
-    app:cardCornerRadius="8dp"
-    android:elevation="8dp">
+    app:cardCornerRadius="10dp"
+    android:elevation="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="10dp"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -20,7 +22,6 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:layout_margin="10dp"
                 android:id="@+id/tv_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -31,22 +32,23 @@
 
 
         <TextView
-            android:layout_marginHorizontal="5dp"
             android:id="@+id/tv_note"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Note"
-            android:textColor="@color/black"
+            android:textColor="#2E2E2E"
             android:textSize="18dp" />
 
         <TextView
-            android:layout_marginHorizontal="5dp"
             android:id="@+id/tv_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:text="Date"
+            android:layout_marginTop="5dp"
             android:textColor="#424242"
-            android:textSize="18dp" />
+            android:textSize="12dp"
+            tools:ignore="TextSizeCheck" />
 
 
 

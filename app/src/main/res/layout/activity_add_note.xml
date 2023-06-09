@@ -71,7 +71,7 @@
         android:lineSpacingMultiplier="1.8"
         android:gravity="top"
         android:hint="Note..."
-        android:inputType="text"
+        android:inputType="textMultiLine"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/toolbar"

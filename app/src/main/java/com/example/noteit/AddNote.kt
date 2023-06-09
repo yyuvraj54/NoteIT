@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.noteit.Models.Note
 import com.example.noteit.databinding.ActivityAddNoteBinding
-import com.example.noteit.databinding.ActivityMainBinding
 import java.lang.Exception
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -41,6 +40,7 @@ class AddNote : AppCompatActivity() {
             val note_desc = binding.edNote.text.toString()
 
             if (title.isNotEmpty() || note_desc.isNotEmpty()) {
+
                 val formatter = SimpleDateFormat("EEE,d MMM yyyy HH:mm a")
                 if (isUpdate) {
                     note = Note(
@@ -52,7 +52,7 @@ class AddNote : AppCompatActivity() {
                     )
                 }
 
-                val intent = Intent(this,MainActivity::class.java)
+                val intent = Intent()
                 intent.putExtra("note", note)
                 setResult(Activity.RESULT_OK, intent)
             } else {
@@ -60,6 +60,9 @@ class AddNote : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+        }
+        binding.imgBackArrow.setOnClickListener {
+            onBackPressed()
         }
     }
 
