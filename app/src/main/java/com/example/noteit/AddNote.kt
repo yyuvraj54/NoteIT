@@ -55,6 +55,7 @@ class AddNote : AppCompatActivity() {
                 val intent = Intent()
                 intent.putExtra("note", note)
                 setResult(Activity.RESULT_OK, intent)
+                finish()
             } else {
                 Toast.makeText(this, "Please enter some data", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
